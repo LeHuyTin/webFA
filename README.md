@@ -9,12 +9,10 @@ WebFA là một trang web thương mại điện tử chuyên về thời trang,
 - **Database**: MySQL
 - **Framework CSS**: Bootstrap
 - **Icons**: FontAwesome
-- **Additional**: React.js (trong thư mục begin/)
 
 ## Cấu trúc dự án
 ```
 webFA/
-├── begin/                  # React application
 ├── Entities/              # Entity classes
 ├── Font/                  # FontAwesome assets
 ├── MVC/                   # MVC architecture

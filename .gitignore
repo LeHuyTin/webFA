@@ -13,11 +13,10 @@ Thumbs.db
 *.swp
 *.swo
 
-# Node modules (for React app)
-begin/
-begin/node_modules/
-begin/build/
-begin/.env
+# Node modules
+node_modules/
+build/
+.env
 
 # Logs
 *.log
