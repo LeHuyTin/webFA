@@ -29,7 +29,7 @@
 <!-- ------------------------------Content------------------------------ -->
 
 <div class="something">
-    <div class="col-3">
+    <div class="col-3" data-aos="fade-up" data-aos-delay="100">
         <div class="iconcol">
             <i class="fa-solid fa-truck-fast"></i>
         </div>
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-3" data-aos="fade-up" data-aos-delay="200">
         <div class="iconcol">
             <i class="fa-solid fa-hand-holding-dollar"></i>
         </div>
@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-3" data-aos="fade-up" data-aos-delay="300">
         <div class="iconcol">
             <i class="fa-solid fa-comments-dollar"></i>
         </div>
@@ -60,7 +60,7 @@
         </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-3" data-aos="fade-up" data-aos-delay="400">
         <div class="iconcol">
             <i class="fa-solid fa-phone"></i>
         </div>

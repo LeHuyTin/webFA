@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="././Public/css/style.css ?v <?php echo time(); ?>">
     <link rel="stylesheet" href="././Public/css/footer.css ?v <?php echo time(); ?>">
     <link rel="stylesheet" href="././Public/css/productHome.css ?v <?php echo time(); ?>">
+    <link rel="stylesheet" href="././Public/css/product.css ?v <?php echo time(); ?>">
     <link rel="stylesheet" href="font/fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
@@ -37,28 +40,28 @@
                             <div class="columns">
                                 <div class="column">
                                     <div class="tag">Áo</div>
-                                    <a asp-controller="Aopolo" class="dropdown-item">Áo Polo</a>
-                                    <a asp-controller="Aothun" class="dropdown-item">Áo Thun</a>
-                                    <a asp-controller="Aosomi" class="dropdown-item">Áo Sơ mi</a>
-                                    <a asp-controller="Aokhoac" class="dropdown-item">Áo Khoác</a>
-                                    <a asp-controller="Aotanktop" class="dropdown-item">Áo Tanktop</a>
-                                    <a asp-controller="Aohoodies" class="dropdown-item">Áo Hoodies</a>
+                                    <a href="product?category=ao-polo" class="dropdown-item">Áo Polo</a>
+                                    <a href="product?category=ao-thun" class="dropdown-item">Áo Thun</a>
+                                    <a href="product?category=ao-somi" class="dropdown-item">Áo Sơ mi</a>
+                                    <a href="product?category=ao-khoac" class="dropdown-item">Áo Khoác</a>
+                                    <a href="product?category=ao-tanktop" class="dropdown-item">Áo Tanktop</a>
+                                    <a href="product?category=ao-hoodies" class="dropdown-item">Áo Hoodies</a>
                                 </div>
                                 <div class="column">
                                     <div class="tag">Quần</div>
-                                    <a asp-controller="Quanjean" class="dropdown-item">Quần Jean</a>
-                                    <a asp-controller="Quantay" class="dropdown-item">Quần Tây</a>
-                                    <a asp-controller="Quanshort" class="dropdown-item">Quần Short</a>
-                                    <a asp-controller="Quanjogger" class="dropdown-item">Quần Jogger - Quần dài</a>
-                                    <a asp-controller="Boxer" class="dropdown-item">Quần Boxer</a>
+                                    <a href="product?category=quan-jean" class="dropdown-item">Quần Jean</a>
+                                    <a href="product?category=quan-tay" class="dropdown-item">Quần Tây</a>
+                                    <a href="product?category=quan-short" class="dropdown-item">Quần Short</a>
+                                    <a href="product?category=quan-jogger" class="dropdown-item">Quần Jogger - Quần dài</a>
+                                    <a href="product?category=quan-boxer" class="dropdown-item">Quần Boxer</a>
                                 </div>
                                 <div class="column">
                                     <div class="tag">Giày & phụ kiện</div>
-                                    <a asp-controller="Giay" class="dropdown-item">Giày</a>
-                                    <a asp-controller="Balo" class="dropdown-item">Balo & túi</a>
-                                    <a asp-controller="Non" class="dropdown-item">Nón</a>
-                                    <a asp-controller="Thatlung" class="dropdown-item">Thắt lưng</a>
-                                    <a asp-controller="Kinhmat" class="dropdown-item">Kính mắt</a>
+                                    <a href="product?category=giay" class="dropdown-item">Giày</a>
+                                    <a href="product?category=balo-tui" class="dropdown-item">Balo & túi</a>
+                                    <a href="product?category=non" class="dropdown-item">Nón</a>
+                                    <a href="product?category=that-lung" class="dropdown-item">Thắt lưng</a>
+                                    <a href="product?category=kinh-mat" class="dropdown-item">Kính mắt</a>
                                 </div>
                             </div>
                         </div>

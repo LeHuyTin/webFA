@@ -3,7 +3,7 @@
         <div class="col-4">
             <p>Đăng ký nhận tin</p>
             <div class="dangkitin">
-                <input type="text" placeholder="Nhập email của bạn">
+                <input type="text" placeholder="Email của bạn">
                 <button>Đăng kí</button>
             </div>
             <div class="contact">
@@ -30,17 +30,11 @@
             <p>Liên hệ</p>
             <ul>
                 <li><i class="fa-solid fa-location-dot"></i> Địa
-                    chỉ: 97 Lê Quý Đôn - Hoài Nhơn - Bình Định</li>
+                    chỉ: Tân Phú, Hồ Chí Minh</li>
                 <li><i class="fa-solid fa-phone"></i> Hotline:
                     0963.269.711</li>
                 <li><i class="fa-solid fa-envelope"></i> Email:
-                    tnlhuy@gmail.com</li>
-                <li class="logo_footer">
-                    <a href="index">
-                        <img src="././Public/img/icon1.png">
-                        <img src="././Public/img/logo.png">
-                    </a>
-                </li>
+                    lehuytint@gmail.com</li>
             </ul>
         </div>
     </div>
@@ -53,7 +47,17 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
 </script>
+<!-- AOS Animation Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        offset: 100,
+        once: true
+    });
+</script>
 <script src="././Public/js/slide.js"></script>
 <script src="././Public/js/action.js"></script>
+<script src="././Public/js/product.js"></script>
 
 </html>
