@@ -4,7 +4,7 @@
         <div class="product-controls">
             <div class="sort-section">
                 <div class="dropdown">
-                    <label for="sort-select">Sắp xếp theo:</label>
+                    <label for="sort-select">Sắp xếp: Mặc định</label>
                     <i class="fa-solid fa-chevron-down"></i>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" data-value="default">Mặc định</a>
