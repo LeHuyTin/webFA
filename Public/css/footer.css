@@ -1,0 +1,124 @@
+.footer {
+    margin-top: 200px;
+    background-color: rgb(189, 189, 189);
+    color: black;
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 230px;
+}
+
+.col-4 {
+    padding-left: 60px;
+}
+
+.col-4 p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.col-4 li {
+    font-size: 18px;
+    color: #2f2f2f;
+}
+
+.col-4 li a {
+    color: #2f2f2f;
+}
+
+.col-4 li a:hover {
+    color: black;
+}
+
+.dangkitin {
+    display: flex;
+    border-bottom: 2px solid black;
+    width: max-content;
+    padding-bottom: 3px;
+    transition: 0.3s;
+}
+
+.dangkitin input[type="text"] {
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    width: 200px;
+    padding-right: 15px;
+    align-items: start;
+    background-color: rgb(189, 189, 189);
+}
+
+.dangkitin input[type="text"]:focus {
+    outline: none;
+}
+
+.dangkitin button {
+    padding: 5px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    font-weight: bold;
+}
+
+.dangkitin button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: 0.3s;
+}
+
+.col-4 ul {
+    padding: 0;
+}
+
+.contact {
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+.logo_footer {
+    margin-top: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.logo_footer img {
+    margin-right: 50px;
+}
+
+
+
+.social-media i {
+    margin: 10px;
+    font-size: 25px;
+    transition: 0.2s ease-in-out;
+}
+
+.social-media .fa-facebook:hover {
+    color: rgb(0, 0, 180);
+    filter: drop-shadow(0 0 20px rgb(0, 0, 180));
+}
+
+.social-media .fa-instagram:hover {
+    color: rgb(255, 0, 123);
+    filter: drop-shadow(0 0 20px rgb(255, 0, 123));
+}
+
+.social-media .fa-x-twitter:hover {
+    color: white;
+    filter: drop-shadow(0 0 20px black);
+}
+
+.social-media .fa-envelope:hover {
+    color: rgb(155, 20, 20);
+    filter: drop-shadow(0 0 20px rgb(155, 20, 20));
+}
+
+.social-media .fa-tiktok:hover {
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 20px rgb(0, 225, 255));
+}

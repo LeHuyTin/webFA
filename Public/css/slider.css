@@ -1,0 +1,89 @@
+.slider {
+    width: 100%;
+    height: 600px;
+    margin: 70px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: 100%;
+    display: flex;
+    transition: 1s;
+}
+
+.item {
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.controls {
+    position: absolute;
+    top: 45%;
+    left: 40px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.711);
+    border-radius: 50%;
+    font-size: 20px;
+    color: #000;
+    transition: 0.2s linear;
+}
+
+#next:hover {
+    box-shadow: 0 0 8px 5px rgba(133, 133, 133, 0.3);
+    transform: translateX(+3px);
+    scale: 1.4;
+}
+
+#prev:hover {
+    box-shadow: 0 0 8px 5px rgba(133, 133, 133, 0.3);
+    transform: translateX(-3px);
+    scale: 1.4;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dots li:hover {
+    background-color: #fff;
+}
+
+.dots li {
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.319);
+    margin: 20px;
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+
+.dots li.active {
+    background-color: #fff;
+}

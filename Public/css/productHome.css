@@ -1,0 +1,215 @@
+.col-3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.something {
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.1s linear, transform 0.1s linear;
+}
+
+.something.visible-down {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.something.hidden-down {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.something.visible-up {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.something.hidden-up {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.something-item {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s linear, transform 0.5s linear;
+}
+
+.something.visible-down .something-item,
+.something.visible-up .something-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.something.hidden-down .something-item {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.something.hidden-up .something-item {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+
+.iconcol {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s linear, transform 0.5s linear;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.icon-info {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.1s linear, transform 0.1s linear;
+    margin-left: 15px;
+}
+
+.icon-desc {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.1s linear, transform 0.1s linear;
+    color: gray;
+}
+
+.iconcol.visible, .icon-info.visible, .icon-desc.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#backtop {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(137, 137, 137);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+    transition: 0.1s ease;
+}
+
+#backtop:hover {
+    background-color: rgb(80, 80, 80);
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    right: 29px;
+    bottom: 39px;
+}
+
+.bst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.bst img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.bst img:hover {
+    transform: scale(1.02);
+    transition: 0.4s;
+}
+
+/* -----------------------------------homepage-product----------------------------------- */
+.product {
+    padding: 0 40px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 60px;
+}
+
+.product-images {
+    display: flex;
+    gap: 5px;
+}
+
+.product .banner img {
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+    transition: 0.3s ease;
+}
+
+.product .banner img:hover {
+    filter: brightness(0.95);
+}
+
+.product-item {
+    margin-top: -10px;
+}
+
+.product-item img {
+    object-fit: cover;
+    height: 400px;
+    width: 270px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.product-banner {
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item img:hover {
+    transform: scale(0.98);
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.product-info p {
+    color: rgb(64, 94, 164);
+    font-size: 18px;
+}
+
+.view-all {
+    display: inline-block;
+    width: 130px;
+    height: 45px;
+    margin: 20px auto;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 2px solid rgb(130, 130, 130);
+    border-radius: 50px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.view-all i {
+    align-items: center;
+    margin-left: 3px;
+}
+
+.view-all:hover {
+    background-color: rgb(130, 130, 130);
+    color: white;
+    cursor: pointer;
+}
