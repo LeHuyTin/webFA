@@ -110,3 +110,157 @@
     color: rgb(255, 255, 255);
     filter: drop-shadow(0 0 20px rgb(0, 225, 255));
 }
+
+/* Responsive Design for Footer */
+@media (max-width: 1200px) {
+    .footer {
+        padding: 40px 80px;
+    }
+    .footer .row {
+        gap: 30px;
+    }
+    .col-4 {
+        flex: 1;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 35px 50px;
+    }
+    .footer .row {
+        gap: 25px;
+    }
+    .footer p {
+        font-size: 16px;
+    }
+    .footer ul li {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .dangkitin input {
+        width: 180px;
+        font-size: 14px;
+    }
+    .dangkitin button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 30px;
+    }
+    .footer .row {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .col-4 {
+        width: 100%;
+        text-align: center;
+    }
+    .footer p {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .footer ul {
+        text-align: center;
+    }
+    .footer ul li {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    .dangkitin {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .dangkitin input {
+        width: 200px;
+    }
+    .social-media {
+        justify-content: center;
+        gap: 15px;
+    }
+    .social-media a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 25px 20px;
+    }
+    .footer p {
+        font-size: 14px;
+    }
+    .footer ul li {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .dangkitin input {
+        width: 160px;
+        font-size: 12px;
+        padding: 8px;
+    }
+    .dangkitin button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .social-media a {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px 15px;
+    }
+    .footer p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    .footer ul li {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+    .dangkitin {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dangkitin input {
+        width: 180px;
+    }
+    .social-media {
+        gap: 12px;
+    }
+    .social-media a {
+        font-size: 16px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer {
+        padding: 15px 10px;
+    }
+    .footer p {
+        font-size: 12px;
+    }
+    .footer ul li {
+        font-size: 10px;
+    }
+    .dangkitin input {
+        width: 150px;
+        font-size: 10px;
+    }
+    .dangkitin button {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+    .social-media a {
+        font-size: 14px;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,121 @@
+/* about.css - FA-shion shop */
+.about-container {
+    max-width: 100%;
+    margin: 90px auto 51px auto;
+    padding: 42px 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.about-container h1 {
+    margin-top: 5px !important;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #24243a;
+    margin-bottom: 40px;
+}
+.about-container p, .about-container ul {
+    font-size: 1.3rem;
+    color: #444;
+    line-height: 1.7;
+}
+.about-container ul {
+    margin-top: 18px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .about-container {
+        max-width: 90%;
+        margin: 100px 5% 30px 5%;
+        padding: 35px 20px;
+    }
+    .about-container h1 {
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+    .about-container p, .about-container ul {
+        font-size: 1.2rem;
+    }
+    .about-container ul {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about-container {
+        max-width: 95%;
+        margin: 90px 2.5% 25px 2.5%;
+        padding: 30px 18px;
+    }
+    .about-container h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    .about-container p, .about-container ul {
+        font-size: 1.1rem;
+    }
+    .about-container ul {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        max-width: 98%;
+        margin: 80px 1% 20px 1%;
+        padding: 25px 15px;
+        border-radius: 12px;
+    }
+    .about-container h1 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .about-container p, .about-container ul {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .about-container ul {
+        font-size: 0.95rem;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about-container {
+        margin: 70px 10px 15px 10px;
+        padding: 20px 12px;
+        border-radius: 8px;
+    }
+    .about-container h1 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    .about-container p, .about-container ul {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    .about-container ul {
+        font-size: 0.85rem;
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-container {
+        margin: 60px 8px 10px 8px;
+        padding: 15px 10px;
+    }
+    .about-container h1 {
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+    }
+    .about-container p, .about-container ul {
+        font-size: 0.85rem;
+    }
+    .about-container ul {
+        font-size: 0.8rem;
+    }
+}

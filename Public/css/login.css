@@ -1,229 +1,462 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('../img/login_bg.jpg');
-    color: rgb(252, 211, 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../img/login_bg.jpg");
+  color: rgb(252, 211, 3);
+  margin: 0;
+  padding: 0;
 }
 
 .zform {
-    width: 500px;
-    height: 470px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    transition: 0.2s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: slideIn 0.5s ease;
+  width: 500px;
+  height: 470px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideIn 0.5s ease;
 }
 
 @keyframes slideIn {
-    0% {
-        transform: translateY(50px);
-        filter: blur(10px);
-    }
+  0% {
+    transform: translateY(50px);
+    filter: blur(10px);
+  }
 
-    100% {
-        transform: translateY(0);
-        filter: 0;
-    }
+  100% {
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
 
 .zform.active {
-    height: 690px;
+  height: 690px;
 }
 
 .zform.forgot {
-    height: 300px;
-    transform: translateX(-66px);
+  height: 300px;
+  transform: translateX(-66px);
 }
 
 .zform .close_btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background: rgb(36, 43, 128);
-    cursor: pointer;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: rgb(36, 43, 128);
+  cursor: pointer;
+  z-index: 1;
 }
 
 .close_btn i {
-    padding: 15px;
+  padding: 15px;
+  color: rgb(252, 211, 3);
 }
 
 .close_btn:hover {
-    background-color: rgb(27, 32, 96);
+  background-color: rgb(27, 32, 96);
+}
+
+.close_btn a {
+  color: white;
+  text-decoration: none;
 }
 
 .btn.btn-primary {
-    background-color: rgb(36, 43, 128);
-    color: rgb(252, 211, 3);
-    outline: none;
-    border: none;
+  background-color: rgb(36, 43, 128);
+  color: rgb(252, 211, 3);
+  outline: none;
+  border: none;
 }
 
 .btn.btn-primary:hover {
-    background: rgb(27, 32, 96);
+  background: rgb(27, 32, 96);
 }
 
 .zform .login_form {
-    position: absolute;
+  position: absolute;
 }
 
 a {
-    text-underline-offset: 3px;
-    color: rgb(252, 211, 3);
+  text-underline-offset: 3px;
+  color: rgb(252, 211, 3);
 }
 
 .mb-3 {
-    margin: 30px 40px;
-    border-bottom: 2px solid rgb(252, 211, 3);
+  margin: 30px 40px;
+  border-bottom: 2px solid rgb(252, 211, 3);
 }
 
 .mb-3 label {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.mb-3 input:active, .mb-3 input:focus {
-    color: white;
+.mb-3 input:active,
+.mb-3 input:focus {
+  color: white;
 }
 
 .mb-3 input {
-    color: white;
+  color: white;
 }
 
 .password-container {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .password-container .form-control {
-    flex: 1;
+  flex: 1;
 }
 
 .password-container .toggle-password {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    left: 200px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: rgb(252, 211, 3);
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  right: -170px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(252, 211, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-control {
-    background: transparent;
-    border: none;
-    outline: none;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
 .form-control:focus {
-    background: transparent;
-    border: none;
-    outline: none;
-    box-shadow: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
-.form-check-input, .form-check-label, .forgot {
-    display: inline-block;
+.form-check-input,
+.form-check-label,
+.forgot {
+  display: inline-block;
 }
 
 .save_pass {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 .forgot {
-    margin-left: 135px;
+  margin-left: 135px;
 }
 
 .forgot a:hover {
-    color: rgb(250, 228, 117);
+  color: rgb(250, 228, 117);
 }
 
 h2 {
-    text-align: center;
-    margin-top: 50px;
-
+  text-align: center;
+  margin-top: 50px;
 }
 
 button {
-    width: 150px;
-    cursor: pointer;
-    margin: 20px 175px;
+  width: 150px;
+  cursor: pointer;
+  margin: 20px 175px;
 }
 
 .login_register {
-    text-align: center;
-    margin: 10px;
+  text-align: center;
+  margin: 10px;
 }
 
 .login_register a:hover {
-    color: rgb(250, 228, 117);
+  color: rgb(250, 228, 117);
 }
 
 .zform .login_form {
-    transition: transform 0.3s ease;
-    transform: translateX(0);
+  transition: transform 0.3s ease;
+  transform: translateX(0);
 }
 
 .zform.active .login_form {
-    transition: none;
-    transform: translateX(-500px);
+  transition: none;
+  transform: translateX(-500px);
 }
 
 .zform.forgot .login_form {
-    transition: none;
-    transform: translateX(-500px);
+  transition: none;
+  transform: translateX(-500px);
 }
 
 .zform .register_form {
-    position: absolute;
-    transition: none;
-    transform: translateX(500px);
+  position: absolute;
+  transition: none;
+  transform: translateX(500px);
 }
 
 .zform.active .register_form {
-    transition: transform 0.3s ease;
-    transform: translateX(0);
+  transition: transform 0.3s ease;
+  transform: translateX(0);
 }
 
 .zform .forgot_form {
-    position: absolute;
-    transition: none;
-    transform: translateY(-500px);
+  position: absolute;
+  transition: none;
+  transform: translateY(-500px);
 }
 
 .zform.forgot .forgot_form {
-    transition: transform 0.3s ease;
-    transform: translateY(0);
+  transition: transform 0.3s ease;
+  transform: translateY(0);
 }
 
 .back_login {
-    position: absolute;
-    top: 0;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background: rgb(36, 43, 128);
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+
+  align-items: center;
+  display: flex;
+  background: rgb(36, 43, 128);
+  cursor: pointer;
 }
 
 .back_login:hover {
-    background-color: rgb(27, 32, 96);
+  background-color: rgb(27, 32, 96);
+}
+
+.back_login i {
+  color: rgb(252, 211, 3);
+}
+
+/* Alert styles for error/success messages - hiển thị ở góc trên bên phải màn hình */
+.alert {
+  position: fixed;
+  top: 32px;
+  right: 40px;
+  min-width: 320px;
+  max-width: 90vw;
+  z-index: 9999;
+  padding: 14px 22px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
+  animation: fadeInAlert 0.4s;
+}
+
+@keyframes fadeInAlert {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.92);
+  border: 1px solid rgba(220, 53, 69, 0.95);
+  color: #fff;
+}
+
+/* Xóa các style tăng chiều cao zform/show-alert và alert cũ */
+@media (max-width: 1200px) {
+  .zform {
+    width: 450px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 992px) {
+  .zform {
+    width: 400px;
+    height: 400px;
+  }
+  .mb-3 {
+    margin: 25px 35px;
+  }
+  button {
+    margin: 15px 150px;
+  }
+  .alert {
+    margin: 12px 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .zform {
+    width: 350px;
+    height: 380px;
+  }
+  .zform.active {
+    height: 620px;
+  }
+  .mb-3 {
+    margin: 20px 30px;
+  }
+  .mb-3 input {
+    font-size: 14px;
+  }
+  button {
+    width: 130px;
+    margin: 15px 110px;
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 40px;
+  }
+  .password-container .toggle-password {
+    font-size: 18px;
+    right: 8px;
+    width: 35px;
+    height: 35px;
+  }
+  .alert {
+    margin: 12px 30px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .zform {
+    width: 300px;
+    height: 360px;
+  }
+  .zform.active {
+    height: 580px;
+  }
+  .zform.forgot {
+    height: 280px;
+  }
+  .mb-3 {
+    margin: 18px 25px;
+  }
+  .mb-3 label {
+    font-size: 13px;
+  }
+  .mb-3 input {
+    font-size: 13px;
+  }
+  button {
+    width: 120px;
+    margin: 12px 90px;
+    font-size: 13px;
+    padding: 8px;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 35px;
+  }
+  .password-container .toggle-password {
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+  }
+  .alert {
+    margin: 10px 25px;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .zform {
+    width: 280px;
+    height: 340px;
+  }
+  .zform.active {
+    height: 560px;
+  }
+  .mb-3 {
+    margin: 15px 20px;
+  }
+  .mb-3 label {
+    font-size: 12px;
+  }
+  .mb-3 input {
+    font-size: 12px;
+  }
+  button {
+    width: 110px;
+    margin: 10px 85px;
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 1.1rem;
+    margin-top: 30px;
+  }
+  .password-container .toggle-password {
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+  }
+  .save_pass {
+    margin-left: 20px;
+    font-size: 11px;
+  }
+  .forgot {
+    margin-left: 85px;
+    font-size: 11px;
+  }
+  .login_register {
+    font-size: 12px;
+  }
+  .alert {
+    margin: 8px 20px;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .zform {
+    width: 260px;
+    height: 320px;
+  }
+  .zform.active {
+    height: 540px;
+  }
+  .mb-3 {
+    margin: 12px 18px;
+  }
+  button {
+    width: 100px;
+    margin: 8px 80px;
+    font-size: 11px;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .password-container .toggle-password {
+    font-size: 12px;
+  }
+  .alert {
+    margin: 6px 18px;
+    font-size: 10px;
+    padding: 5px 8px;
+  }
 }

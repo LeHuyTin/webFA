@@ -75,6 +75,9 @@
                                 <label class="filter-checkbox">
                                     <input type="checkbox" value="quan-boxer"> Quần Boxer
                                 </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" value="ban-chay"> Bán chạy
+                                </label>
                             </div>
                         </div>
                     </div>

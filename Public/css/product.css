@@ -140,9 +140,8 @@
 
 .search-input:focus {
     outline: none;
-    border-color: #424141;
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
 }
 
 .search-input:hover {
@@ -160,9 +159,10 @@
     backdrop-filter: blur(3px);
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 50px;
-    height: 50px;
+    border: 2px solid #ddd;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    width: 53px;
+    height: 53px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,7 +171,12 @@
 .search-btn:hover {
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+}
+
+.search-btn:hover i {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
 }
 
 /* Content, filter và products */
@@ -310,6 +315,36 @@
     background: linear-gradient(90deg, #f8f8f8 0%, #fff 100%);
 }
 
+/* Special styling for bestseller filter */
+.filter-checkbox input[value="ban-chay"] {
+    accent-color: #d32f2f;
+}
+
+.filter-checkbox:has(input[value="ban-chay"]) {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    border-color: #d32f2f;
+    color: #d32f2f;
+    font-weight: 700;
+    position: relative;
+}
+
+.filter-checkbox:has(input[value="ban-chay"])::before {
+    content: "🔥";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+.filter-checkbox:has(input[value="ban-chay"]:checked) {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border-color: #b71c1c;
+    color: #b71c1c;
+    font-weight: 700;
+    box-shadow: 0 3px 8px rgba(211, 47, 47, 0.3);
+}
+
 /* Price Range Slider */
 .price-range {
     position: relative;
@@ -386,22 +421,18 @@
     border: none;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(3px);
-    border-radius: 50%;
     color: #666;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .reset-btn:hover {
-    background: #f5f5f5;
     color: #424141;
-    transform: rotate(180deg) scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: rotate(180deg) scale(1.05);
 }
 
 .reset-btn:active {

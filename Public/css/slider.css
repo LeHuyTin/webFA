@@ -29,6 +29,10 @@
     display: block;
 }
 
+.item:nth-child(4) img {
+    object-position: -120px center;
+}
+
 .controls {
     position: absolute;
     top: 45%;

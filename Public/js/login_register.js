@@ -59,3 +59,34 @@ function togglePasswordVisibility(button) {
     passwordToggle.classList.add("fa-eye-slash");
   }
 }
+
+// Alert: Tự động ẩn alert-danger và alert-success sau 3 giây (hiển thị global)
+document.addEventListener("DOMContentLoaded", function () {
+  const alerts = document.querySelectorAll(".alert-danger, .alert-success");
+  if (alerts.length > 0) {
+    setTimeout(function () {
+      alerts.forEach(function (alert) {
+        alert.style.display = "none";
+      });
+    }, 3000);
+  }
+});
+
+// Toggle password
+function toggleRegisterPasswords(button) {
+  var passwordInput = document.getElementById("password-register");
+  var confirmInput = document.getElementById("repassword");
+  var passwordToggle = button.querySelector("i");
+  var isHidden = passwordInput.type === "password";
+  if (isHidden) {
+    passwordInput.type = "text";
+    confirmInput.type = "text";
+    passwordToggle.classList.remove("fa-eye-slash");
+    passwordToggle.classList.add("fa-eye");
+  } else {
+    passwordInput.type = "password";
+    confirmInput.type = "password";
+    passwordToggle.classList.remove("fa-eye");
+    passwordToggle.classList.add("fa-eye-slash");
+  }
+}

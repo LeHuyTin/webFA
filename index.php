@@ -9,7 +9,7 @@ conn();
 if (isset($_GET['url'])) {
     $url = explode('/', $_GET['url']);
     $controller = !empty($url[0]) ? $url[0] : 'index';
-    $action = isset($url[1]) ? $url[1] : 'index';
+    $action = isset($url[1]) && $url[1] !== '' ? $url[1] : 'index';
 } else {
     $controller = 'index';
     $action = 'index';

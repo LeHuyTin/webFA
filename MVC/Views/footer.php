@@ -20,10 +20,8 @@
         <div class="col-4">
             <p>Thông tin</p>
             <ul>
-                <li><a href>Giới thiệu</a></li>
-                <li><a href>Chính sách bảo mật</a></li>
-                <li><a href>Chính sách vận chuyển</a></li>
-                <li><a href>Chính sách đổi trả</a></li>
+                <li><a href="index.php?url=about">Giới thiệu</a></li>
+                <li><a href="index.php?url=chinhsach">Chính sách của FA-Shion Shop</a></li>
             </ul>
         </div>
         <div class="col-4">

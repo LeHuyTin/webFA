@@ -1,0 +1,137 @@
+/* responsive.css - Global Responsive Rules for FA-shion shop */
+
+/* Reset và Base Styles */
+* {
+    box-sizing: border-box !important;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden !important;
+    font-family: "Nunito", sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Container responsive */
+.container, .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* Global responsive breakpoints */
+@media screen and (max-width: 1400px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 14px;
+    }
+    .container, .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+    .container, .container-fluid {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 11px;
+    }
+    .container, .container-fluid {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Ensure tables are responsive */
+table {
+    width: 100% !important;
+    table-layout: fixed !important;
+}
+
+/* Hide elements on small screens if needed */
+@media screen and (max-width: 480px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Show elements only on mobile */
+@media screen and (min-width: 481px) {
+    .show-mobile-only {
+        display: none !important;
+    }
+}
+
+/* Responsive text sizes */
+.responsive-text {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .responsive-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .responsive-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsive buttons */
+.btn, button {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1rem !important;
+}
+
+@media screen and (max-width: 768px) {
+    .btn, button {
+        padding: 0.6rem 1.2rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .btn, button {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.8rem !important;
+    }
+}

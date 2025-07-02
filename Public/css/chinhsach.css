@@ -1,0 +1,199 @@
+/* chinhsach.css - FA-shion shop */
+.policy-container {
+  display: flex;
+  max-width: 100%;
+  margin: 136px auto 100px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+}
+
+.policy-sidebar {
+  width: 330px;
+  background: #f7f7fa;
+  border-right: 1.5px solid #eee;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.policy-sidebar button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 14px 32px;
+  font-size: 1.3rem;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 600;
+  border-radius: 0 20px 20px 0;
+}
+.policy-sidebar button.active,
+.policy-sidebar button:hover {
+  background: #e9ecef;
+  color: #24243a;
+}
+.policy-content {
+  flex: 1;
+  padding: 36px 40px;
+}
+.policy-content h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #24243a;
+  margin-bottom: 16px;
+}
+.policy-content p,
+.policy-content ul {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.7;
+}
+@media screen and (max-width: 1200px) {
+    .policy-container {
+        max-width: 90%;
+        margin: 120px 5% 50px 5%;
+    }
+    .policy-sidebar {
+        width: 220px;
+        padding: 28px 0;
+    }
+    .policy-sidebar button {
+        padding: 12px 28px;
+        font-size: 1.05rem;
+    }
+    .policy-content {
+        padding: 32px 35px;
+    }
+    .policy-content h2 {
+        font-size: 1.4rem;
+    }
+    .policy-content p, .policy-content ul {
+        font-size: 1.05rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .policy-container {
+        margin: 90px auto 40px auto;
+    }
+    .policy-sidebar {
+        width: 200px;
+        padding: 25px 0;
+    }
+    .policy-sidebar button {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+    .policy-content {
+        padding: 28px 30px;
+    }
+    .policy-content h2 {
+        font-size: 1.3rem;
+    }
+    .policy-content p, .policy-content ul {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .policy-container {
+        flex-direction: column;
+        margin: 80px auto 30px auto;
+        border-radius: 12px;
+    }
+    .policy-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1.5px solid #eee;
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-around;
+        padding: 15px 0;
+    }
+    .policy-sidebar button {
+        border-radius: 20px 20px 0 0;
+        padding: 12px 8px;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    .policy-content {
+        padding: 25px 20px;
+    }
+    .policy-content h2 {
+        font-size: 1.25rem;
+    }
+    .policy-content p, .policy-content ul {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .policy-container {
+        margin: 70px auto 20px auto;
+        border-radius: 8px;
+    }
+    .policy-sidebar {
+        padding: 12px 0;
+    }
+    .policy-sidebar button {
+        padding: 10px 5px;
+        font-size: 0.85rem;
+    }
+    .policy-content {
+        padding: 20px 15px;
+    }
+    .policy-content h2 {
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+    }
+    .policy-content p, .policy-content ul {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .policy-container {
+        margin: 60px auto 15px auto;
+    }
+    .policy-sidebar {
+        padding: 10px 0;
+    }
+    .policy-sidebar button {
+        padding: 8px 3px;
+        font-size: 0.8rem;
+    }
+    .policy-content {
+        padding: 15px 12px;
+    }
+    .policy-content h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    .policy-content p, .policy-content ul {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 400px) {
+    .policy-container {
+        margin: 50px auto 10px auto;
+    }
+    .policy-sidebar button {
+        font-size: 0.75rem;
+        padding: 6px 2px;
+    }
+    .policy-content {
+        padding: 12px 8px;
+    }
+    .policy-content h2 {
+        font-size: 1rem;
+    }
+    .policy-content p, .policy-content ul {
+        font-size: 0.8rem;
+    }
+}

@@ -1,8 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Price slider functionality
+    // Check if we're on product page - only run if ALL required product elements exist
     const priceMaxSlider = document.getElementById('price-max');
     const priceMaxValue = document.getElementById('price-max-value');
     const priceRangeDisplay = document.getElementById('price-range-display');
+    const searchInput = document.getElementById('product-search');
+    const searchBtn = document.querySelector('.search-btn');
+    const resetCategoriesBtn = document.getElementById('reset-categories');
+    
+    // Exit early if not on product page or missing critical elements
+    if (!priceMaxSlider || !priceMaxValue || !priceRangeDisplay || !searchInput || !searchBtn || !resetCategoriesBtn) {
+        return;
+    }
+    
+    // Price slider functionality
 
     function formatPrice(price) {
         return new Intl.NumberFormat('vi-VN').format(price) + ' VND';
@@ -30,11 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const productCards = document.querySelectorAll('.product-card');
         
         productCards.forEach(card => {
-            const productPrice = parseInt(card.querySelector('.product-price').textContent.replace(/\D/g, ''));
-            if (productPrice <= maxPrice) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
+            const priceElement = card.querySelector('.product-price');
+            if (priceElement) {
+                const productPrice = parseInt(priceElement.textContent.replace(/\D/g, ''));
+                if (productPrice <= maxPrice) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
             }
         });
     }
@@ -45,8 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
     priceMaxSlider.addEventListener('input', updatePriceRange);
 
     // Search functionality
-    const searchInput = document.getElementById('product-search');
-    const searchBtn = document.querySelector('.search-btn');
     
     function performSearch() {
         const searchTerm = searchInput.value.toLowerCase();
@@ -122,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Danh sách mapping các danh mục với từ khóa
     const categoryKeywords = {
+        'ban-chay': ['bán chạy', 'hot', 'bestseller', 'phổ biến'],
         'ao-polo': ['polo', 'áo polo'],
         'ao-thun': ['thun', 'áo thun', 't-shirt'],
         'ao-somi': ['sơ mi', 'áo sơ mi', 'shirt'],
@@ -171,7 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Reset all filters functionality
-    const resetCategoriesBtn = document.getElementById('reset-categories');
     resetCategoriesBtn.addEventListener('click', function() {
         // Reset category checkboxes
         const categoryCheckboxes = document.querySelectorAll('.filter-checkbox input[type="checkbox"]');
@@ -295,6 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 // Determine which category section this belongs to
                 const categoryKeywords = {
+                    'ban-chay': 'quan-ao',
                     'ao-polo': 'quan-ao', 'ao-thun': 'quan-ao', 'ao-somi': 'quan-ao', 
                     'ao-khoac': 'quan-ao', 'ao-tanktop': 'quan-ao', 'ao-hoodies': 'quan-ao',
                     'quan-jean': 'quan-ao', 'quan-tay': 'quan-ao', 'quan-short': 'quan-ao', 
@@ -326,4 +338,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Call the function when page loads
     checkURLParameters();
+    
+    // Handle search term from URL
+    function handleSearchFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchTerm = urlParams.get('search');
+        
+        if (searchTerm) {
+            searchInput.value = searchTerm;
+            performSearch();
+        }
+    }
+    
+    // Initialize search from URL
+    handleSearchFromURL();
 });

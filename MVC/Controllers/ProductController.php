@@ -8,6 +8,10 @@ class ProductController
         // Lấy danh sách sản phẩm từ model
         $productModel = new ProductModel();
         $products = $productModel->getAllProducts();
+        
+        // Lấy search term và category từ URL nếu có
+        $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
+        $category = isset($_GET['category']) ? $_GET['category'] : '';
 
         // Tạo nội dung cho view
         ob_start();

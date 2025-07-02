@@ -66,7 +66,7 @@
 
 .others li {
     margin: 12px;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .others li .fa-bag-shopping, .fa-user {
@@ -74,8 +74,8 @@
     text-decoration: none;
     transition: 0.2s linear;
     padding: 10px;
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     display: inline-block;
     border-radius: 20%;
     text-align: center;
@@ -84,6 +84,25 @@
 .others li .fa-bag-shopping:hover, .fa-user:hover {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Style riêng cho icon user chưa đăng nhập */
+.others li > a.fa-user {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: 0.2s linear;
+  padding: 10px;
+  width: 46px;
+  height: 46px;
+  display: inline-block;
+  border-radius: 20%;
+  text-align: center;
+  font-size: 24px;
+  background: none;
+}
+.others li > a.fa-user:hover {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
 }
 
 .search {
@@ -121,38 +140,22 @@
     filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.5));
 }
 
-#search-input {
-    border: none;
-    font-size: 18px;
-    width: 0;
-    opacity: 0;
-    transition: 0.3s ease;
-    outline: none;
-    background-color: transparent;
-    margin-left: 17px;
-    color: #000;
-}
-
-.search:hover #search-input,
-.search:focus-within #search-input {
-    width: 200px;
-    opacity: 1;
-    padding-left: 3px;
-
-}
-
 /* Dropdown menu */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-.dropdown i {
-    transition: 0.2s ease-in-out;
+.dropdown > a > i.fa-chevron-down {
+  transition: 0.2s ease-in-out;
 }
-
-.dropdown:hover i {
-    transform: rotate(180deg);
+.dropdown:hover > a > i.fa-chevron-down {
+  transform: rotate(180deg);
+}
+/* Gỡ hiệu ứng rotate khỏi các icon khác trong dropdown */
+.dropdown i:not(.fa-chevron-down) {
+  transform: none !important;
+  transition: none !important;
 }
 
 .dropdown-menu {
@@ -231,4 +234,215 @@
     font-size: 16px;
     margin-left: -5px;
     width: 255px;
+}
+
+/* User menu styles */
+.user-menu .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 22px 10px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 17px;
+    min-width: 180px;
+    max-width: 320px;
+    white-space: nowrap;
+}
+
+.user-menu .user-info:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.user-menu .user-info i.fa-user-circle {
+    font-size: 26px;
+}
+
+.user-menu .user-info i.fa-chevron-down {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.user-menu .user-info span {
+  font-size: 17px;
+  font-weight: 600;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Đồng bộ style icon user trong dropdown với icon logout */
+.user-dropdown .dropdown-item i.fa-info-circle {
+  font-size: 20px;
+  color: black;
+}
+
+.user-dropdown .dropdown-item.logout i.fa-sign-out-alt {
+  font-size: 18px;
+  color: #dc3545;
+}
+
+.user-dropdown {
+    right: -130;
+    left: auto;
+    min-width: 200px;
+    top: calc(100% - 10px);
+}
+
+.user-dropdown .dropdown-item.info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 13px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.user-dropdown .dropdown-item:hover {
+    background: #e7e7e7;
+}
+
+.user-dropdown .dropdown-item.logout {
+    color: #dc3545;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive Design for Header */
+@media (max-width: 1200px) {
+    .header {
+        padding: 0px 100px;
+    }
+    .menu {
+        padding-left: 40px;
+    }
+    .menu>li {
+        margin: 0 25px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 0px 50px;
+        height: 70px;
+    }
+    .menu {
+        padding-left: 20px;
+    }
+    .menu>li {
+        margin: 0 20px;
+        font-size: 0.9rem;
+    }
+    .others li {
+        margin: 0 8px;
+    }
+    .search input {
+        width: 180px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0px 20px;
+        height: 60px;
+        flex-wrap: wrap;
+    }
+    .logo {
+        flex: 2;
+    }
+    .logo img {
+        height: 35px;
+    }
+    .menu {
+        flex: 6;
+        padding-left: 10px;
+    }
+    .menu>li {
+        margin: 0 15px;
+        font-size: 0.85rem;
+    }
+    .others {
+        flex: 2;
+    }
+    .others li {
+        margin: 0 5px;
+    }
+    .search input {
+        width: 120px;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .dropdown-menu {
+        min-width: 180px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 0px 15px;
+        height: 55px;
+    }
+    .logo img {
+        height: 30px;
+    }
+    .menu>li {
+        margin: 0 10px;
+        font-size: 0.8rem;
+    }
+    .search input {
+        width: 100px;
+        font-size: 11px;
+    }
+    .dropdown-menu {
+        min-width: 150px;
+        font-size: 12px;
+    }
+    .dropdown-menu a {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0px 10px;
+        height: 50px;
+    }
+    .logo img {
+        height: 25px;
+    }
+    .menu>li {
+        margin: 0 8px;
+        font-size: 0.75rem;
+    }
+    .search input {
+        width: 80px;
+        font-size: 10px;
+    }
+    .others li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        padding: 0px 5px;
+        height: 45px;
+    }
+    .menu>li {
+        margin: 0 5px;
+        font-size: 0.7rem;
+    }
+    .search {
+        display: none;
+    }
+    .dropdown-menu {
+        min-width: 120px;
+        font-size: 10px;
+    }
 }
