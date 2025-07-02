@@ -61,7 +61,13 @@
                         <span><?php echo htmlspecialchars($_SESSION['full_name'] ?? $_SESSION['username']); ?></span>
                         <i class="fa fa-chevron-down"></i>
                     </a>
-                    <div class="dropdown-menu user-dropdown">
+                    <div class="dropdown-menu user-dropdown" style="font-size: 16px;">
+                        <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                            <a href="index.php?url=admin" class="dropdown-item info">
+                                <i class="fa fa-cogs"></i>
+                                Quản trị hệ thống
+                            </a>
+                        <?php endif; ?>
                         <a href="index.php?url=login/profile" class="dropdown-item info">
                             <i class="fa fa-info-circle"></i>
                             Hồ sơ cá nhân
@@ -77,6 +83,7 @@
             <!-- User chưa đăng nhập -->
             <li><a class="fa fa-user" href="index.php?url=login" title="Đăng nhập"></a></li>
         <?php endif; ?>
+        <?php if (!(isset($_SESSION['role']) && $_SESSION['role'] === 'admin')): ?>
         <li>
             <?php if (isset($_SESSION['user_id'])): ?>
                 <a class="fa-solid fa-bag-shopping" href="index.php?url=cart" title="Giỏ hàng"></a>
@@ -84,5 +91,6 @@
                 <a class="fa-solid fa-bag-shopping" href="index.php?url=login" title="Giỏ hàng"></a>
             <?php endif; ?>
         </li>
+        <?php endif; ?>
     </div>
 </div>

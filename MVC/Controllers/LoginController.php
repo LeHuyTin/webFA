@@ -40,6 +40,11 @@ class LoginController
                     $_SESSION['full_name'] = $user['full_name'];
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['role'] = $user['role'];
+                    // Nếu là admin thì chuyển hướng đến trang quản trị
+                    if ($user['role'] === 'admin') {
+                        header('Location: index.php?url=admin');
+                        exit();
+                    }
                     // Chuyển hướng về trang chủ hoặc trang trước đó
                     $redirect = $_SESSION['redirect_after_login'] ?? 'index.php';
                     unset($_SESSION['redirect_after_login']);

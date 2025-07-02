@@ -29,7 +29,8 @@
         'about' => 'about.css',
         'chinhsach' => 'chinhsach.css', 
         'product' => 'product.css',
-        'login' => 'login.css'
+        'login' => 'login.css',
+        'admin' => 'admin.css'
     ];
     
     // Load CSS for specific pages
