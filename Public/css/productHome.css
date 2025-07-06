@@ -134,6 +134,8 @@
     padding-top: 20px;
     padding-bottom: 30px;
     margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .product-images {
@@ -167,7 +169,7 @@
 }
 
 .product-banner {
-    margin-left: 15px;
+    margin-left: 35px;
     display: flex;
     flex-wrap: wrap;
 }

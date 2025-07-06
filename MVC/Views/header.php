@@ -42,7 +42,7 @@
         <li><a href="index.php?url=promo">Khuyến mãi</a></li>
         <li>
             <div class="dropdown">
-                <a href="index.php?url=info">Thông tin</a>
+                <a href="index.php?url=about">Thông tin</a>
                 <i class="fa-solid fa-chevron-down"></i>
                 <div class="dropdown-menu">
                     <a href="index.php?url=about" class="dropdown-item">Giới thiệu</a>

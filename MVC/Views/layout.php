@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="././Public/css/header.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="././Public/css/footer.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="././Public/css/productHome.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="././Public/css/cart.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="././Public/css/profile.css?v=<?php echo time(); ?>">
     
     <?php
     // Load page-specific CSS files

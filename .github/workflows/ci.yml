@@ -1,0 +1,71 @@
+name: CI/CD for FA-shion Admin
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: mbstring, pdo, pdo_mysql
+          coverage: xdebug
+
+      - name: Install Composer dependencies
+        run: |
+          if [ -f composer.json ]; then composer install --no-interaction; fi
+
+      - name: Run PHP Lint
+        run: |
+          find . -type f -name '*.php' -exec php -l {} \;
+
+      - name: Run PHPUnit tests
+        run: |
+          if [ -f vendor/bin/phpunit ]; then vendor/bin/phpunit --testdox; else echo "No PHPUnit found, skipping tests."; fi
+
+      - name: Run JS Lint (ESLint)
+        run: |
+          if [ -f package.json ]; then npm ci && npx eslint .; else echo "No JS linting."; fi
+
+      - name: Run CSS Lint (Stylelint)
+        run: |
+          if [ -f package.json ]; then npx stylelint "**/*.css"; else echo "No CSS linting."; fi
+
+      - name: Archive production artifacts
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: fa-shion-admin-artifacts
+          path: |
+            Public/
+            MVC/
+            Entities/
+            index.php
+            Database/
+
+  # Optional: Deploy job (example for FTP, customize as needed)
+  # deploy:
+  #   needs: build-and-test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Download artifact
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: fa-shion-admin-artifacts
+  #     - name: Deploy to FTP
+  #       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+  #       with:
+  #         server: ${{ secrets.FTP_SERVER }}
+  #         username: ${{ secrets.FTP_USERNAME }}
+  #         password: ${{ secrets.FTP_PASSWORD }}
+  #         local-dir: ./
+  #         server-dir: /public_html/

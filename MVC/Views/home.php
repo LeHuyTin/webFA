@@ -90,8 +90,8 @@
     </div>
 </div>
 
-<h1>SẢN PHẨM NỔI BẬT</h1>
 
+<h1>SẢN PHẨM NỔI BẬT</h1>
 <div class="product">
     <div class="row">
         <div class="product-images">
